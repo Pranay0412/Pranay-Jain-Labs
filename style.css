@@ -1,0 +1,120 @@
+:root {
+    --power-lime: #C3D809;
+    --slide-dark: #222022;
+    --text-light: #f4f4f4;
+    --card-bg: #2d2b2d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--slide-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+header {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #1a191a 0%, var(--slide-dark) 100%);
+    border-bottom: 2px solid var(--power-lime);
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--power-lime);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border 0.3s ease;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border: 1px solid var(--power-lime);
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.card-tag {
+    background: var(--power-lime);
+    color: var(--slide-dark);
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: var(--power-lime);
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.card-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--power-lime);
+    font-weight: bold;
+    border: 1px solid var(--power-lime);
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.card-link:hover {
+    background: var(--power-lime);
+    color: var(--slide-dark);
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    opacity: 0.5;
+    font-size: 0.8rem;
+}
