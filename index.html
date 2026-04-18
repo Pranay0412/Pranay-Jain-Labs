@@ -1,57 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jain Pranay | Project Hub</title>
-    
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
-
-    <header>
-        <h1 id="main-title">Pranay Jain Labs</h1>
-        <p id="welcome-msg">Computer Engineering Student | Full-Stack & Data Portfolio</p>
+  </head>
+  <body>
+    <header id="main-header">
+      <h1 id="main-title">Pranay Jain Labs</h1>
+      <div class="search-container">
+        <input
+          type="text"
+          id="project-search"
+          placeholder="Search projects..."
+        />
+      </div>
     </header>
 
-    <div class="container">
-        <div class="grid">
-            
-            <div class="card">
-                <div class="card-content">
-                    <span class="card-tag">Full-Stack</span>
-                    <h3>PropertyPlus</h3>
-                    <p>A real estate platform built with Flask and PostgreSQL. Features include user dashboards and property listings.</p>
-                    <a href="https://github.com/Pranay0412/PropertyPlus" class="card-link">View Project</a>
-                </div>
+    <main class="container">
+      <div class="grid">
+        <div id="project-modal" class="modal">
+          <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title">Project Name</h2>
+            <div class="modal-body">
+              <p id="modal-desc">Description goes here...</p>
+              <div class="tech-stack" id="modal-tech"></div>
             </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <span class="card-tag">Data Engineering</span>
-                    <h3>Real-Time Pipeline</h3>
-                    <p>Exploration of data engineering using Kafka, Redis, and Docker for real-time processing.</p>
-                    <a href="#" class="card-link">Explore Code</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-content">
-                    <span class="card-tag">Python/JS</span>
-                    <h3>Code-Lab Experiments</h3>
-                    <p>Small scripts, automation tools, and daily coding challenges to sharpen logic.</p>
-                    <a href="#" class="card-link">Open Folder</a>
-                </div>
-            </div>
-
+          </div>
         </div>
-    </div>
+
+        <div
+          class="card"
+          data-title="PropertyPlus"
+          data-desc="A full-stack real estate platform. Users can list properties, search with filters, and manage a personal dashboard. Features secure login and PostgreSQL integration."
+          data-tech="Python, Flask, PostgreSQL, HTML/CSS"
+        >
+          <div class="card-content">
+            <span class="card-tag">Full-Stack</span>
+            <h3>PropertyPlus</h3>
+            <p>
+              A comprehensive real estate management system built with Flask and
+              PostgreSQL. It features user authentication, dynamic property
+              listings, and a personalized dashboard for buyers and sellers.
+            </p>
+          </div>
+          <a
+            href="https://github.com/Pranay0412/PropertyPlus"
+            class="card-link"
+            onclick="event.stopPropagation()"
+            >View Code</a
+          >
+        </div>
+      </div>
+    </main>
 
     <footer>
-        &copy; 2026 Jain Pranay. Built with passion and Code.
+      <div class="footer-content">
+        <p id="welcome-msg"></p>
+        <p>&copy; 2026 Jain Pranay. Built with passion and Code.</p>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>
