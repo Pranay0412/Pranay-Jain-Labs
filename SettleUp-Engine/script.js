@@ -1,16 +1,16 @@
 let expenses = [];
 
 document.getElementById('add-expense-btn').addEventListener('click', () => {
-    const payer = document.getElementById('payer').value;
+    const payer = document.getElementById('payer').value.toUpperCase().trim();
     const amount = parseFloat(document.getElementById('amount').value);
-    const peopleStr = document.getElementById('participants').value;
+    const peopleStr = document.getElementById('participants').value.toUpperCase().trim();
 
     if (!payer || isNaN(amount) || !peopleStr) {
         alert("Please fill all fields");
         return;
     }
 
-    const participants = peopleStr.split(',').map(p => p.trim());
+    const participants = peopleStr.split(',').map(p => p.trim().toUpperCase());
     expenses.push({ payer, amount, participants });
 
     // Updated with proper class for styling
